@@ -37,7 +37,26 @@ s3://8760BC55A9A047B3B9FD68D4C5C43874:9DD40B9B326C4EA99ACAD4200538013E@tds-api.a
 /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384
 
 
+
+
+conda activate videollm
+cd /mnt/afs/zengwang/tds/videollm-online/
+
+
 HF_DATASETS_OFFLINE=1 HF_HUB_OFFLINE=1 python -m demo.app \
    --resume_from_checkpoint /mnt/afs/zengwang/tds/ckpt/videollm-online-8b-v1plus \
    --llm_pretrained /mnt/afs/zengwang/tds/ckpt/Meta-Llama-3-8B-Instruct \
-   --vision_pretrained /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384
+   --vision_pretrained /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384 \
+   --frame_fps 10
+
+
+python -m demo.cli \
+   --resume_from_checkpoint /mnt/afs/zengwang/tds/ckpt/videollm-online-8b-v1plus \
+   --llm_pretrained /mnt/afs/zengwang/tds/ckpt/Meta-Llama-3-8B-Instruct \
+   --vision_pretrained /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384 \
+   --frame_fps 10
+
+
+Please count how many push-ups the man does. Each time he finishes a push-up, please output the number of push-ups he has done.
+
+Please narrate the video in real time.
