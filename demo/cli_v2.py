@@ -58,8 +58,14 @@ if __name__ == '__main__':
         print('='*100)
         src_path = input('Please enter the video path\n')
         query = input('Please enter the query\n')
+
         if src_path.strip() == '' or query.strip() == '':
             break
+
+        if not os.path.exists(src_path):
+            print(f'no such file: {src_path}')
+            continue
+
         print(f'video: {src_path}')
         print(f'query at 0s: {query}')
         main(liveinfer, src_path, query, 0.0)

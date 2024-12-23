@@ -59,7 +59,8 @@ python -m demo.cli_v2 \
 demo/assets/push-up_20s.mp4
 Please count how many push-ups the man does. Each time he finishes a push-up, please output the number of push-ups he has done.
 
-
+demo/assets/push-up_20s.mp4
+Please count how many push-ups the man does.
 
 
 
