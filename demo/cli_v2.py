@@ -55,6 +55,7 @@ if __name__ == '__main__':
     liveinfer = LiveInfer()
     print('finsh loading!')
     while True:
+        print('='*100)
         src_path = input('Please enter the video path\n')
         query = input('Please enter the query\n')
         if src_path.strip() == '' or query.strip() == '':
