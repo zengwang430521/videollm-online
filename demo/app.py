@@ -91,4 +91,5 @@ with gr.Blocks(title="VideoLLM-online", css=css) as demo:
         gr_liveinfer_queue_refresher.change(gr_liveinfer_queue_refresher_change, inputs=[gr_chat_interface.chatbot], outputs=[gr_chat_interface.chatbot])
     
     demo.queue()
-    demo.launch(share=False)
+    # demo.launch(share=False, )
+    demo.launch(debug=True, server_name="0.0.0.0", server_port=8193)

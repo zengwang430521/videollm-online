@@ -53,9 +53,9 @@ def _clip_vision_encode(vision_model: nn.Module, frames: Tensor, frame_token_cls
 
 def build_live_vision(config: LiveConfigMixin):
     model = AutoModel.from_pretrained(config.vision_pretrained).vision_model
-    if 'google/siglip-large-patch16-384' == config.vision_pretrained:
+    if 'siglip-large-patch16-384' in config.vision_pretrained:
         return model, partial(_siglip_vision_encode, frame_token_cls=config.frame_token_cls, frame_token_pooled=config.frame_token_pooled)
-    elif 'laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90k' == config.vision_pretrained or 'openai/clip-vit-large-patch14-336' == config.vision_pretrained:
+    elif 'CLIP-ViT-L-14-DataComp.XL-s13B-b90k' in config.vision_pretrained or 'clip-vit-large-patch14-336' in config.vision_pretrained:
         return model, partial(_clip_vision_encode, config)
     else:
         raise ValueError(f'Unverified vision_pretrained: {config.vision_pretrained}')
