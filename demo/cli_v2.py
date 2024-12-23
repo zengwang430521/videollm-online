@@ -53,12 +53,12 @@ def main(liveinfer: LiveInfer, src_video_path: str, query: str, video_time:float
 
 if __name__ == '__main__':
     liveinfer = LiveInfer()
-    src_path = input('Please enter the video path')
-    query = input('Please enter the query')
-
-    while src_path.strip() != '' and query.strip() != '':
+    print('finsh loading!')
+    while True:
+        src_path = input('Please enter the video path\n')
+        query = input('Please enter the query\n')
+        if src_path.strip() == '' or query.strip() == '':
+            break
         print(f'video: {src_path}')
         print(f'query at 0s: {query}')
         main(liveinfer, src_path, query, 0.0)
-        src_path = input('Please enter the video path')
-        query = input('Please enter the query')
