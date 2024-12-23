@@ -54,7 +54,7 @@ python -m demo.cli_v2 \
    --resume_from_checkpoint /mnt/afs/zengwang/tds/ckpt/videollm-online-8b-v1plus \
    --llm_pretrained /mnt/afs/zengwang/tds/ckpt/Meta-Llama-3-8B-Instruct \
    --vision_pretrained /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384 \
-   --frame_fps 10
+   --frame_fps 5
 
 demo/assets/push-up_20s.mp4
 Please count how many push-ups the man does. Each time he finishes a push-up, please output the number of push-ups he has done.

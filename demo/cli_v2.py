@@ -68,4 +68,5 @@ if __name__ == '__main__':
 
         print(f'video: {src_path}')
         print(f'query at 0s: {query}')
+        liveinfer.reset()
         main(liveinfer, src_path, query, 0.0)
