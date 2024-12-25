@@ -56,28 +56,38 @@ python -m demo.cli_v2 \
    --vision_pretrained /mnt/afs/zengwang/tds/ckpt/siglip-large-patch16-384 \
    --frame_fps 5
 
+
+
+
+
+
+
+
 demo/assets/push-up_20s.mp4
 Please count how many push-ups the man does. Each time he finishes a push-up, please output the number of push-ups he has done.
-
-demo/assets/push-up_20s.mp4
-Please count how many push-ups the man does.
-
-demo/assets/push-up_20s.mp4
-Please narrate the video in real time.
-
-
-
-demo/assets/push-up_20s.mp4
 (Video Time = 0.0s) User: Please count how many push-ups the man does.
 (Video Time = 0.0s) Assistant: A man does push-ups.
 
 demo/assets/push-up_20s.mp4
+Please count how many push-ups the man does.
 (Video Time = 0.0s) User: Please count how many push-ups the man does. Each time he finishes a push-up, please output the number of push-ups he has done.
 (Video Time = 0.0s) Assistant: A man does push-ups.
 
 demo/assets/push-up_20s.mp4
+Please narrate the video in real time.
 (Video Time = 0.0s) User: Please narrate the video in real time.
 (Video Time = 0.0s) Assistant: You exercise with a group of people.
+
+
+
+demo/assets/push-up_2.mp4
+Please narrate the video in real time.
+(Video Time = 0.0s) User: Please narrate the video in real time.
+(Video Time = 0.0s) Assistant: You exercise with a group of people.
+
+
+
+
 
 
 #模型
