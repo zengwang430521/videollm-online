@@ -13,11 +13,15 @@ def main(liveinfer: LiveInfer, src_video_path: str, query: str, video_time:float
     name, ext = os.path.splitext(src_video_path)
     ffmpeg_video_path = os.path.join('demo/assets/cache', name + f'_{liveinfer.frame_fps}fps_{liveinfer.frame_resolution}' + ext)
     save_history_path = src_video_path.replace('.mp4', '.json')
-    if not os.path.exists(ffmpeg_video_path):
-        os.makedirs(os.path.dirname(ffmpeg_video_path), exist_ok=True)
-        ffmpeg_once(src_video_path, ffmpeg_video_path, fps=liveinfer.frame_fps, resolution=liveinfer.frame_resolution)
-        logger.warning(f'{src_video_path} -> {ffmpeg_video_path}, {liveinfer.frame_fps} FPS, {liveinfer.frame_resolution} Resolution')
-    
+    # if not os.path.exists(ffmpeg_video_path):
+    #     os.makedirs(os.path.dirname(ffmpeg_video_path), exist_ok=True)
+    #     ffmpeg_once(src_video_path, ffmpeg_video_path, fps=liveinfer.frame_fps, resolution=liveinfer.frame_resolution)
+    #     logger.warning(f'{src_video_path} -> {ffmpeg_video_path}, {liveinfer.frame_fps} FPS, {liveinfer.frame_resolution} Resolution')
+
+    os.makedirs(os.path.dirname(ffmpeg_video_path), exist_ok=True)
+    ffmpeg_once(src_video_path, ffmpeg_video_path, fps=liveinfer.frame_fps, resolution=liveinfer.frame_resolution)
+    logger.warning(f'{src_video_path} -> {ffmpeg_video_path}, {liveinfer.frame_fps} FPS, {liveinfer.frame_resolution} Resolution')
+
     liveinfer.load_video(ffmpeg_video_path)
     liveinfer.input_query_stream(query, video_time=video_time)
 
