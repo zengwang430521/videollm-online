@@ -82,8 +82,7 @@ Please narrate the video in real time.
 
 demo/assets/push-up_2.mp4
 Please narrate the video in real time.
-(Video Time = 0.0s) User: Please narrate the video in real time.
-(Video Time = 0.0s) Assistant: You exercise with a group of people.
+
 
 
 
